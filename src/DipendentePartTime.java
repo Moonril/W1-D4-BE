@@ -2,8 +2,8 @@ public class DipendentePartTime extends Dipendente {
 
     private boolean partTime = true;
 
-    public DipendentePartTime(String matricola, Dipartimento dipartimento, boolean partTime) {
-        super(matricola, dipartimento);
+    public DipendentePartTime(Dipartimento dipartimento, boolean partTime) {
+        super(dipartimento);
         this.partTime = partTime;
     }
 

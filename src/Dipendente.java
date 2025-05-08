@@ -1,19 +1,22 @@
-public abstract class Dipendente {
-    private String matricola;
+import java.util.Random;
+
+public abstract class Dipendente implements Lavoratore {
+    private int matricola;
     private double sipendio;
     private Dipartimento dipartimento;
 
     // costruttore
 
-    public Dipendente(String matricola, Dipartimento dipartimento) {
-        this.matricola = matricola;
+    public Dipendente(Dipartimento dipartimento) {
+        Random generatore = new Random(); // crea random un numero, non siamo certi che sia univoco.
+        matricola = generatore.nextInt(1, 20000);
         this.dipartimento = dipartimento;
     }
 
 
     // set get
 
-    public String getMatricola() {
+    public int getMatricola() {
         return matricola;
     }
 
@@ -44,5 +47,10 @@ public abstract class Dipendente {
                 ", sipendio=" + sipendio +
                 ", dipartimento=" + dipartimento +
                 '}';
+    }
+
+    @Override
+    public boolean checkIn() {
+        return false;
     }
 }

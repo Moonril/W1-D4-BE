@@ -4,8 +4,8 @@ public class DipendenteFullTime extends Dipendente{
 
     //costruttore
 
-    public DipendenteFullTime(String matricola, Dipartimento dipartimento, boolean fullTime) {
-        super(matricola, dipartimento);
+    public DipendenteFullTime(Dipartimento dipartimento, boolean fullTime) {
+        super(dipartimento);
         this.fullTime = fullTime;
     }
 

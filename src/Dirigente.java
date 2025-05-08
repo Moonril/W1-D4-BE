@@ -3,8 +3,8 @@ public class Dirigente extends Dipendente{
     private boolean dirigente = true;
 
 
-    public Dirigente(String matricola, Dipartimento dipartimento, boolean dirigente) {
-        super(matricola, dipartimento);
+    public Dirigente(Dipartimento dipartimento, boolean dirigente) {
+        super(dipartimento);
         this.dirigente = dirigente;
 
     }
@@ -23,4 +23,6 @@ public class Dirigente extends Dipendente{
                 "dirigente=" + dirigente +
                 '}';
     }
+
+
 }
